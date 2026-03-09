@@ -42,6 +42,10 @@ app.listen(3000,()=>{
 
 })
 
+app.get("/", (req, res) => {
+  res.send("Task Manager Backend is running");
+});
+
 app.use("/api/auth",authRoutes)
 app.use("/api/users",userRoutes)
 app.use("/api/tasks",taskRoutes)
